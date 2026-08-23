@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: mini-dmart-backend
+    runtime: docker
+    dockerfilePath: Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: SERVER_PORT
+        value: 8088
+      - key: APP_JWT_SECRET
+        value: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970337336763979244226452948404D6351
+      - key: APP_JWT_EXPIRATION_MS
+        value: 86400000
